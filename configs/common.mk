@@ -55,6 +55,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/$(VENDOR)/prebuilt/etc/apns-conf.xml:system/etc/apns-conf.xml
 
+# SELinux filesystem labels
+PRODUCT_COPY_FILES += \
+    vendor/$(VENDOR)/prebuilt/etc/init.d/50selinuxrelabel:system/etc/init.d/50selinuxrelabel
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.build.selinux=1
+
 # Gapps backup script
 PRODUCT_COPY_FILES += \
     vendor/$(VENDOR)/prebuilt/bin/backuptool.sh:system/bin/backuptool.sh \
