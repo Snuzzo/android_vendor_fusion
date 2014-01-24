@@ -19,8 +19,8 @@ ifeq (fusion_hammerhead,$(TARGET_PRODUCT))
 # OVERLAY_TARGET adds overlay asset source
 OVERLAY_TARGET := fusion_xhdpi
 
-# Include  common configuration
-include vendor/pa/main.mk
+# Include common configuration
+include vendor/fusion/main.mk
 
 # Inherit AOSP device configuration
 $(call inherit-product, device/lge/hammerhead/full_hammerhead.mk)
