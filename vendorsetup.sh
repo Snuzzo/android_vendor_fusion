@@ -1,2 +1,2 @@
-add_lunch_combo pa_hammerhead-userdebug
+add_lunch_combo fusion_hammerhead-userdebug
 
