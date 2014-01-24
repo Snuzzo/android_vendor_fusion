@@ -13,7 +13,7 @@
 # limitations under the License.
 
 
-include vendor/fusiom/vendor.mk
+include vendor/fusion/vendor.mk
 include vendor/fusion/configs/common.mk
 include vendor/fusion/configs/bootanimation.mk
 include vendor/fusion/configs/version.mk
