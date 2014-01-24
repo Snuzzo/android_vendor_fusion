@@ -1,4 +1,4 @@
-# Copyright (C) 2013 ParanoidAndroid Project
+# Copyright (C) 2013 Fusion Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,12 +13,9 @@
 # limitations under the License.
 
 
-
-include vendor/pa/vendor.mk
-include vendor/pa/configs/aosp_fixes.mk
-include vendor/pa/configs/system.mk
-include vendor/pa/configs/pa_overrides.mk
-include vendor/pa/configs/bootanimation.mk
-include vendor/pa/configs/version.mk
+include vendor/fusiom/vendor.mk
+include vendor/fusion/configs/common.mk
+include vendor/fusion/configs/bootanimation.mk
+include vendor/fusion/configs/version.mk
 
 

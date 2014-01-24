@@ -1,4 +1,4 @@
-# Copyright (C) 2013 ParanoidAndroid Project
+# Copyright (C) 2014 Fusion Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,25 +14,22 @@
 
 # Check for target product
 
-ifeq (pa_hammerhead,$(TARGET_PRODUCT))
+ifeq (fusion_hammerhead,$(TARGET_PRODUCT))
 
 # OVERLAY_TARGET adds overlay asset source
-OVERLAY_TARGET := pa_xhdpi
+OVERLAY_TARGET := fusion_xhdpi
 
-# Build paprefs from sources
-PREFS_FROM_SOURCE ?= true
-
-# Include ParanoidAndroid common configuration
+# Include  common configuration
 include vendor/pa/main.mk
 
 # Inherit AOSP device configuration
 $(call inherit-product, device/lge/hammerhead/full_hammerhead.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_hammerhead
+PRODUCT_NAME := fusion_hammerhead
 PRODUCT_BRAND := Google
 PRODUCT_MODEL := Nexus 5
 PRODUCT_MANUFACTURER := LGE
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=occam BUILD_FINGERPRINT="google/occam/hammerhead:4.4/KRT16M/737497:user/release-keys" PRIVATE_BUILD_DESC="occam-user 4.4 KRT16M 737497 release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=hammerhead BUILD_FINGERPRINT=google/hammerhead/hammerhead:4.4.2/KOT49H/937116:user/release-keys PRIVATE_BUILD_DESC="hammerhead-user 4.4.2 KOT49H 937116 release-keys"
 
 endif
