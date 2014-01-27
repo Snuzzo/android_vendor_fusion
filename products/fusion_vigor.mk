@@ -1,4 +1,4 @@
-# Copyright (C) 2013 Fusion Project
+# Copyright (C) 2014 Fusion Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,10 +12,24 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ifeq (fusion_hammerhead,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/fusion_hammerhead.mk
-endif
-ifeq (fusion_vigor,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/fusion_vigor.mk
-endif
+# Check for target product
 
+ifeq (fusion_vigor,$(TARGET_PRODUCT))
+
+# OVERLAY_TARGET adds overlay asset source
+OVERLAY_TARGET := fusion_xhdpi
+
+# Include common configuration
+include vendor/fusion/main.mk
+
+# Inherit AOSP device configuration
+$(call inherit-product, device/htc/vigor/vigor.mk)
+
+# Device naming
+PRODUCT_NAME := fusion_vigor
+PRODUCT_BRAND := htc
+PRODUCT_DEVICE := vigor
+PRODUCT_MODEL := Rezound
+PRODUCT_MANUFACTURER := HTC
+
+endif
