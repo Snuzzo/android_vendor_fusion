@@ -76,6 +76,12 @@ PRODUCT_COPY_FILES += \
     vendor/$(VENDOR)/prebuilt/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon \
     vendor/$(VENDOR)/prebuilt/apk/Superuser.apk:system/app/Superuser.apk
 
+# T-Mobile theme engine
+PRODUCT_PACKAGES += \
+    ThemeManager \
+    ThemeChooser \
+    com.tmobile.themes
+
 # Extra properties
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.fusion.device=$(DEVICE)
