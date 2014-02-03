@@ -18,4 +18,7 @@ endif
 ifeq (fusion_vigor,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/fusion_vigor.mk
 endif
+ifeq (fusion_grouper,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/fusion_grouper.mk
+endif
 

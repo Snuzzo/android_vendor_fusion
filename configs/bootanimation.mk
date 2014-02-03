@@ -20,6 +20,9 @@ ifeq (fusion_vigor,$(TARGET_PRODUCT))
     PRODUCT_COPY_FILES += \
         vendor/fusion/prebuilt/bootanimation/1280x720.zip:system/media/bootanimation.zip
 endif
-
+ifeq (fusion_grouper,$(TARGET_PRODUCT))
+    PRODUCT_COPY_FILES += \
+        vendor/fusion/prebuilt/bootanimation/1280x720.zip:system/media/bootanimation.zip
+endif
 
 
